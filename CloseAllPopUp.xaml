@@ -1,0 +1,136 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllPopUp" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Close All Popups" sap:VirtualizedContainerService.HintSize="1238,1866" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="uix:NPopupHandleState" Name="isPopupHandled" />
+      <Variable x:TypeArguments="x:String" Name="uiPopupResult" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Use Browser Instance" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,1843" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_Browser]" InteractionMode="DebuggerApi" ScopeGuid="dab8c4d5-db87-4788-8067-9049f6a47ada" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,1721" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="488,1661" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1539" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClosePopup PopupException="{x:Null}" DisplayName="Close Popup" sap:VirtualizedContainerService.HintSize="452,191" sap2010:WorkflowViewState.IdRef="NClosePopup_1" PopupAppearTimeout="3" PopupHandled="[isPopupHandled]" PreferredButtons="[New String(){&quot;Close&quot;,&quot;Cancel&quot;,&quot;Ok&quot;,&quot;OK&quot;,&quot;X&quot;,&quot;x&quot;,&quot;×&quot;}]" Version="V5" />
+                  <ui:LogMessage DisplayName="Log State" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[MODULE] Close Activity State: &quot; + isPopupHandled.ToString()]" />
+                  <uix:NInjectJsScript InputParameter="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="452,195" sap2010:WorkflowViewState.IdRef="NInjectJsScript_1" ScopeIdentifier="dab8c4d5-db87-4788-8067-9049f6a47ada" ScriptCode="function(element, input) { function isVisible(el) { var s = window.getComputedStyle(el); var r = el.getBoundingClientRect(); return s.display !== 'none' &amp;&amp; s.visibility !== 'hidden' &amp;&amp; parseFloat(s.opacity || '1') &gt; 0 &amp;&amp; r.width &gt; 20 &amp;&amp; r.height &gt; 20; } function getText(el) { return ((el.innerText || el.value || el.getAttribute('aria-label') || el.getAttribute('title') || '') + '').trim().toLowerCase(); } var popupSelectors = ['[role=&quot;dialog&quot;]','[aria-modal=&quot;true&quot;]','[class*=&quot;modal&quot; i]','[class*=&quot;popup&quot; i]','[class*=&quot;overlay&quot; i]','[class*=&quot;dialog&quot; i]','[class*=&quot;toast&quot; i]','[class*=&quot;cookie&quot; i]','[class*=&quot;banner&quot; i]','[id*=&quot;modal&quot; i]','[id*=&quot;popup&quot; i]','[id*=&quot;overlay&quot; i]']; var closeWords = ['close','ok','cancel','x','×','đóng','got it','no thanks','not now','accept','agree']; var excludeWords = ['count', 'display', 'header', 'footer', 'nav', 'menu', 'sidebar']; var popups = []; for (var ps = 0; ps &lt; popupSelectors.length; ps++) { try { document.querySelectorAll(popupSelectors[ps]).forEach(function(el) { if (!isVisible(el)) return; var idStr = (el.id || '').toLowerCase(); var classStr = (el.className || '').toLowerCase(); for(var e=0; e&lt;excludeWords.length; e++) { if(idStr.indexOf(excludeWords[e]) !== -1 || classStr.indexOf(excludeWords[e]) !== -1) return; } if (popups.indexOf(el) === -1) popups.push(el); }); } catch(e) {} } var all = Array.prototype.slice.call(document.querySelectorAll('body *')); for (var k = 0; k &lt; all.length; k++) { var el = all[k]; if (!isVisible(el)) continue; var st = window.getComputedStyle(el); var zi = parseInt(st.zIndex, 10); var r = el.getBoundingClientRect(); var fixed = st.position === 'fixed' || st.position === 'sticky'; var big = r.width &gt; window.innerWidth * 0.25 &amp;&amp; r.height &gt; window.innerHeight * 0.12; if (fixed &amp;&amp; (zi &gt;= 100 || big)) { var idStr = (el.id || '').toLowerCase(); var classStr = (el.className || '').toLowerCase(); var isExcluded = false; for(var e=0; e&lt;excludeWords.length; e++) { if(idStr.indexOf(excludeWords[e]) !== -1 || classStr.indexOf(excludeWords[e]) !== -1) isExcluded = true; } if (!isExcluded &amp;&amp; popups.indexOf(el) === -1) popups.push(el); } } if (popups.length === 0) return 'NONE'; popups.sort(function(a,b) { return (parseInt(window.getComputedStyle(b).zIndex,10) || 0) - (parseInt(window.getComputedStyle(a).zIndex,10) || 0); }); for (var p = 0; p &lt; popups.length; p++) { var buttons = popups[p].querySelectorAll('button,a,[role=&quot;button&quot;],input[type=&quot;button&quot;],input[type=&quot;submit&quot;]'); for (var i = 0; i &lt; buttons.length; i++) { var t = getText(buttons[i]); for (var j = 0; j &lt; closeWords.length; j++) { if (t === closeWords[j] || t.indexOf(closeWords[j]) &gt;= 0) { buttons[i].click(); return 'FOUND_AND_CLICKED|' + t; } } } } return 'FOUND_BUT_NO_BUTTON|' + (popups[0].id || popups[0].className || popups[0].tagName); }" Version="V5">
+                    <uix:NInjectJsScript.ScriptOutput>
+                      <OutArgument x:TypeArguments="x:String">[uiPopupResult]</OutArgument>
+                    </uix:NInjectJsScript.ScriptOutput>
+                  </uix:NInjectJsScript>
+                  <ui:LogMessage DisplayName="Log JS Result" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[MODULE] JS Script Result: &quot; + uiPopupResult]" />
+                  <If Condition="[uiPopupResult IsNot Nothing AndAlso uiPopupResult.StartsWith(&quot;FOUND_BUT_NO_BUTTON&quot;)]" DisplayName="If Found But No Button" sap:VirtualizedContainerService.HintSize="452,476" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="dab8c4d5-db87-4788-8067-9049f6a47ada" Shortcuts="[d(hk)][k(Esc)][u(hk)]" Timeout="3000" Version="V5" />
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <If Condition="[isPopupHandled = UiPath.UIAutomationNext.Enums.NPopupHandleState.NotFound AndAlso uiPopupResult = &quot;NONE&quot;]" DisplayName="If No Popup Found" sap:VirtualizedContainerService.HintSize="452,267" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <ui:Break sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+            </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Selector="&lt;html app='chrome.exe' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
