@@ -1,0 +1,202 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1238,2410" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="uix:NPopupHandleState" Name="isPopupHandled" />
+      <Variable x:TypeArguments="x:String" Name="uiPopupResult" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome UI Popup Test Page(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,2387" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="96565a7d-e7b4-4504-9b1a-449232dcc267" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,2193" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="488,2133" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,2011" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClosePopup PopupException="{x:Null}" DisplayName="Close Popup" sap:VirtualizedContainerService.HintSize="452,191" sap2010:WorkflowViewState.IdRef="NClosePopup_3" PopupAppearTimeout="3" PopupHandled="[isPopupHandled]" PreferredButtons="[New String(){&quot;Close&quot;,&quot;Cancel&quot;,&quot;Ok&quot;,&quot;OK&quot;,&quot;X&quot;,&quot;x&quot;,&quot;×&quot;}]" Version="V5" />
+                  <ui:LogMessage DisplayName="Log Close Popup State" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[LOG] Close Popup Activity State: &quot; + isPopupHandled.ToString()]" />
+                  <uix:NInjectJsScript InputParameter="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="452,195" sap2010:WorkflowViewState.IdRef="NInjectJsScript_1" ScopeIdentifier="96565a7d-e7b4-4504-9b1a-449232dcc267" ScriptCode="function(element, input) { function isVisible(el) { var s = window.getComputedStyle(el); var r = el.getBoundingClientRect(); return s.display !== 'none' &amp;&amp; s.visibility !== 'hidden' &amp;&amp; parseFloat(s.opacity || '1') &gt; 0 &amp;&amp; r.width &gt; 20 &amp;&amp; r.height &gt; 20; } function getText(el) { return ((el.innerText || el.value || el.getAttribute('aria-label') || el.getAttribute('title') || '') + '').trim().toLowerCase(); } var popupSelectors = ['[role=&quot;dialog&quot;]','[aria-modal=&quot;true&quot;]','[class*=&quot;modal&quot; i]','[class*=&quot;popup&quot; i]','[class*=&quot;overlay&quot; i]','[class*=&quot;dialog&quot; i]','[class*=&quot;toast&quot; i]','[class*=&quot;cookie&quot; i]','[class*=&quot;banner&quot; i]','[id*=&quot;modal&quot; i]','[id*=&quot;popup&quot; i]','[id*=&quot;overlay&quot; i]']; var closeWords = ['close','ok','cancel','x','×','đóng','got it','no thanks','not now','accept','agree']; var excludeWords = ['count', 'display', 'header', 'footer', 'nav', 'menu', 'sidebar']; var popups = []; for (var ps = 0; ps &lt; popupSelectors.length; ps++) { try { document.querySelectorAll(popupSelectors[ps]).forEach(function(el) { if (!isVisible(el)) return; var idStr = (el.id || '').toLowerCase(); var classStr = (el.className || '').toLowerCase(); for(var e=0; e&lt;excludeWords.length; e++) { if(idStr.indexOf(excludeWords[e]) !== -1 || classStr.indexOf(excludeWords[e]) !== -1) return; } if (popups.indexOf(el) === -1) popups.push(el); }); } catch(e) {} } var all = Array.prototype.slice.call(document.querySelectorAll('body *')); for (var k = 0; k &lt; all.length; k++) { var el = all[k]; if (!isVisible(el)) continue; var st = window.getComputedStyle(el); var zi = parseInt(st.zIndex, 10); var r = el.getBoundingClientRect(); var fixed = st.position === 'fixed' || st.position === 'sticky'; var big = r.width &gt; window.innerWidth * 0.25 &amp;&amp; r.height &gt; window.innerHeight * 0.12; if (fixed &amp;&amp; (zi &gt;= 100 || big)) { var idStr = (el.id || '').toLowerCase(); var classStr = (el.className || '').toLowerCase(); var isExcluded = false; for(var e=0; e&lt;excludeWords.length; e++) { if(idStr.indexOf(excludeWords[e]) !== -1 || classStr.indexOf(excludeWords[e]) !== -1) isExcluded = true; } if (!isExcluded &amp;&amp; popups.indexOf(el) === -1) popups.push(el); } } if (popups.length === 0) return 'NONE'; popups.sort(function(a,b) { return (parseInt(window.getComputedStyle(b).zIndex,10) || 0) - (parseInt(window.getComputedStyle(a).zIndex,10) || 0); }); for (var p = 0; p &lt; popups.length; p++) { var buttons = popups[p].querySelectorAll('button,a,[role=&quot;button&quot;],input[type=&quot;button&quot;],input[type=&quot;submit&quot;]'); for (var i = 0; i &lt; buttons.length; i++) { var t = getText(buttons[i]); for (var j = 0; j &lt; closeWords.length; j++) { if (t === closeWords[j] || t.indexOf(closeWords[j]) &gt;= 0) { buttons[i].click(); return 'FOUND_AND_CLICKED|' + t; } } } } return 'FOUND_BUT_NO_BUTTON|' + (popups[0].id || popups[0].className || popups[0].tagName); }" Version="V5">
+                    <uix:NInjectJsScript.ScriptOutput>
+                      <OutArgument x:TypeArguments="x:String">[uiPopupResult]</OutArgument>
+                    </uix:NInjectJsScript.ScriptOutput>
+                  </uix:NInjectJsScript>
+                  <ui:LogMessage DisplayName="Log JS Result" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[LOG] JS Script Result: &quot; + uiPopupResult]" />
+                  <If Condition="[uiPopupResult IsNot Nothing AndAlso uiPopupResult.StartsWith(&quot;FOUND_BUT_NO_BUTTON&quot;)]" DisplayName="If Found But No Button" sap:VirtualizedContainerService.HintSize="452,712" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,483" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Escape Shortcut" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;[LOG] No button found, sending Escape key shortcut...&quot;]" />
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="96565a7d-e7b4-4504-9b1a-449232dcc267" Shortcuts="[d(hk)][k(Esc)][u(hk)]" Timeout="3000" Version="V5" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <If Condition="[isPopupHandled = UiPath.UIAutomationNext.Enums.NPopupHandleState.NotFound AndAlso uiPopupResult = &quot;NONE&quot;]" DisplayName="If No Popup Found Anywhere" sap:VirtualizedContainerService.HintSize="452,503" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,283" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Break" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;[LOG] No popup detected by any activity. Breaking loop...&quot;]" />
+                        <ui:Break sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+            </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="2rdSxPKoZkKRbZUibe6wSA" IconBase64="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" InformativeScreenshot="b6d052a6a02701ffc840c09b9f1420cb.jpg" Reference="DVdlk3iFrkCiJNQSjEa6TQ/cMlsPYGnfUyjoyHHJB3Tqw" Selector="&lt;html app='chrome.exe' title='RPA Popup Testing Suite' /&gt;" Url="http://localhost:3000/" Version="V3" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

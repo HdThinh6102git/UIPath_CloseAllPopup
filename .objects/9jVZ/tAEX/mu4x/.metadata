@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome UI Popup Test Page",
+  "Type": "Screen",
+  "Id": "mu4xgqFOVkuusqP8Zr80pA",
+  "Reference": "DVdlk3iFrkCiJNQSjEa6TQ/mu4xgqFOVkuusqP8Zr80pA",
+  "ParentRef": "DVdlk3iFrkCiJNQSjEa6TQ/tAEXqWexZEiJ6C8TnztINw",
+  "Created": "2026-05-04T08:08:11.1007593Z",
+  "Updated": "2026-05-04T08:08:11.1007593Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "Name": "TestClosePopupShopee",
+  "ProjectType": "Process",
+  "Description": "TestClosePopupShopee",
+  "MainFile": "Main.xaml"
+}

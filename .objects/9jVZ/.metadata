@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome UI Popup Test Page",
+  "Type": "App",
+  "Id": "9jVZpangtkOay6OQacw4vQ",
+  "Reference": "DVdlk3iFrkCiJNQSjEa6TQ/9jVZpangtkOay6OQacw4vQ",
+  "Created": "2026-05-04T08:08:11.0132733Z",
+  "Updated": "2026-05-04T08:08:11.0132733Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

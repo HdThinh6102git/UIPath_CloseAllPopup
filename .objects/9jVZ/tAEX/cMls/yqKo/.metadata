@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Open UI Modal",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "yqKoYNdmlU-z2jPeIAijRw",
+  "Reference": "DVdlk3iFrkCiJNQSjEa6TQ/yqKoYNdmlU-z2jPeIAijRw",
+  "ParentRef": "DVdlk3iFrkCiJNQSjEa6TQ/cMlsPYGnfUyjoyHHJB3Tqw",
+  "Created": "2026-05-04T08:19:31.4298615Z",
+  "Updated": "2026-05-04T08:19:31.4298615Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
