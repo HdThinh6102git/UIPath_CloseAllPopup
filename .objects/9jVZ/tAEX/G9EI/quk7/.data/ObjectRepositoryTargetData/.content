@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="rD186muYT0WAQ0vnvQWuNA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="vl0yLPcCSE2bB9RCXIOiUw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost" DesignTimeRectangle="1714, 508, 175, 54" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-custom-01' tag='BUTTON' /&gt;" Guid="df265c57-2249-4d5a-b322-a24e72e8ed12" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Popup Testing Suite' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="c2791cfc4a9882d3faace9fe6341c435.jpg" xmlns="">0-LfIVoCEKE69sg8DVSc3rw</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost/index.html" DesignTimeRectangle="49, 933, 175, 56" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-custom-01' tag='BUTTON' /&gt;" Guid="3fd6f80f-7af6-4429-8ac8-4408124d458c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Popup Testing Suite' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7399f69141cf2cb174c67c9c666db727.jpg" xmlns="">0_27enyg1Xk-BW5xOYQOjsA</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>

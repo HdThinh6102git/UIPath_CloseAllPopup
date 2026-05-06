@@ -1,0 +1,184 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Close_Window_Popup_Example" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Close_Window_Popup_Example_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Close_Window_Popup_Example" sap:VirtualizedContainerService.HintSize="1238,1245" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="uiBrowser" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" ContinueOnError="False" DisplayName="Chrome Test Popup Blocker - WebBrowserTools(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="522,1222" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[uiBrowser]" ScopeGuid="d727776a-888a-4e38-ab54-078176e6ab9a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,1028" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:UiElement" Name="activeWindow" />
+              <Variable x:TypeArguments="ui:UiElement" Name="mainWindow" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetActiveWindow ApplicationWindow="[mainWindow]" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="486,201" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
+              <ui:GetActiveWindow.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </ActivityAction>
+              </ui:GetActiveWindow.Body>
+            </ui:GetActiveWindow>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="[TimeSpan.ParseExact(&quot;00:00:01&quot;, &quot;hh\:mm\:ss&quot;, System.Globalization.CultureInfo.InvariantCulture).TotalSeconds]" DisplayName="Click 'Method #3'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,194" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d727776a-888a-4e38-ab54-078176e6ab9a" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="webbrowsertools.com/popup-blocker" ContentHash="UEPJVDM1WUuvMSK1ZEVkLw" DesignTimeRectangle="216, 397, 187, 45" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='popup' tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='INPUT' /&gt;" Guid="09e61fab-bdcf-4c52-a901-603969f37d9e" InformativeScreenshot="acaba84c4249d5aa1f1d145867b40b9d.jpg" Reference="cbZ0GjyKpk6bRiQJxbsUXg/1dMVbtZU2EKQZ_NV83KWeg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Test Popup Blocker - WebBrowserTools' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:GetActiveWindow ApplicationWindow="[activeWindow]" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="486,201" sap2010:WorkflowViewState.IdRef="GetActiveWindow_2">
+              <ui:GetActiveWindow.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </ActivityAction>
+              </ui:GetActiveWindow.Body>
+            </ui:GetActiveWindow>
+            <If Condition="[Not activeWindow.Get(&quot;title&quot;).ToString.Contains(&quot;Test Popup Blocker&quot;)]" sap:VirtualizedContainerService.HintSize="486,372" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,152" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CloseWindow Selector="{x:Null}" ContinueOnError="True" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="CloseWindow_1" TimeoutMS="3000" UseWindow="[activeWindow]" WaitForReady="INTERACTIVE" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="P0vb7GWZ8kGTtouUgOKOiQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMRSURBVFhHrVcxaxRBFH6FhSCIgoWFYJHCykIEObCwEARJc4UWtwsBSRc01VUpbAIprpC7WQgkeQvXSUAQ7P0TdoKFKY6QK6I3eykCgZVvndmbfY67e3v7wcDdznsz37438723REviIqZ7mqmrmfozpt1sxLSdxPQKc9K+FWBhbKSZvmumtGL80EyDVsgkMd3RTJFmuvRsVDWuNNMYa8h1a2Ee03PNNBGLgsixCfmzGdPjhOkBfmumTWyomabCZ4r0yPVLkTBtmTdYLMK0NTug29JWIh3TdUNGpqsvbb0wm7uO4zobSxgiA/dFEqb30q4AE3b3zeuxLgHCL85QV9pkOI/ppptzRELaNIUhYQlo7w1JmD44RsdyflVopj03rYXJiyO664TptCznSqmuUmqulEorBmweWT9zJqAR2ONqfkQP80UTph0n9Dv5hAdKqZHZ4GMURQe+oZT6bGzeur4iFYPFBNM3m5+ytwcsgeFweEvOWSilOrAZjUbv3OfpmK45OjHBfzrbpxvOyf/iOvgQRdEbvH0TAoBR1iwKEDJ79WxYVr52QCmBmDac/TbBCKplH6xLByAIgk9hGJ6XjJ+9Xu++tS8lwNRx9tsj6Lp9AE2XDkAYhjoMw7RivLT2ZQRMObcp2AejfiEnHrRJYHZIawUCQvu9MtkmAdx/h8AuIrCep+A/GlCXgFLqCW6IUuqrTweAwiGMacOqoI2A9xouQQAqaZXwLIqihdoZaCbOI3BIa9lDR4gufR1MXQLST8IIkS14k3wCdTpnFdN2watFAm74swNoIYoRWqhCFHDPPRsWRhAET10fCRQjJ9JpoRgBrkTKcgmRCYLgdcko3RyoLPemAz4tS0VTiCo4RcSlTYbfMb0QPdzKXdEsplC0eV65z+FxGKNdk3ZVMFVWNqVenfkHpkC5JE6QEiwqbSWyzufvabfdT7OUmqp14i6imX7hABn57qB2QExQxMwziAxsXJ/lP0wsTKfc9NMMg6s6rFrADTFiJb92fGOCK4dPNrlOKzDXtWsaWRyyAX7j8DbZ9A9OPFUJYOI3fgAAAABJRU5ErkJggg==" InformativeScreenshot="f8a17204d4d85f8666c560683465e86a.jpg" Reference="cbZ0GjyKpk6bRiQJxbsUXg/ZjqXRsjDkUG2Z8ZIQdneyg" Selector="&lt;html app='chrome.exe' title='Test Popup Blocker - WebBrowserTools' /&gt;" Url="https://webbrowsertools.com/popup-blocker/" Version="V3">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1d3gu6L3yEa7XCRvYupM7A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="webbrowsertools.com/popup-blocker" DesignTimeRectangle="216, 578, 187, 45" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='popup' tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='INPUT' /&gt;" Guid="9a6e34d3-68d8-464e-bb97-b69dfca07887" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Test Popup Blocker - WebBrowserTools' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d7cf345ee75a7185f69412d94acf5542.jpg" xmlns="">0KMbe0WqB9USbAeSS7eEd1g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

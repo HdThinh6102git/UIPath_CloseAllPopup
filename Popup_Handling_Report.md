@@ -10,7 +10,7 @@ Báo cáo này tổng hợp chi tiết các loại Popup (Hộp thoại) gặp p
 | :--- | :--- | :--- | :--- | :--- |
 | **1. DOM Popup** *(Trong trang)* | Thẻ HTML (`<div>`, `<dialog>`) nằm trực tiếp trong DOM. | Che khuất các nút bấm thật, gây lỗi `Obscured Element` hoặc `Element Not Found`. | <span style="color:green">**Đã xử lý (Handled)**</span> | Nhúng mã JavaScript thông minh ([DetectPopupAndClose.js](file:///c:/Users/PC/Desktop/QuintetCompany/projects/insurance_auto_login_ms_uipath/UI_Path_Project/UIPath_ClosePopupInUI/DetectPopupAndClose.js)) quét động, phân loại bằng `z-index` và giả lập click() vào nút đóng (Đã tích hợp tiếng Hàn). |
 | **2. Native Dialog** *(Hệ thống)* | Do trình duyệt tạo ra (`alert()`, `confirm()`, `prompt()`). Không có trong HTML. | Chặn đứng toàn bộ mã JavaScript của trang, treo luồng chạy của Robot. | <span style="color:green">**Đã xử lý (Handled)**</span> | Sử dụng hoạt động `Close Popup` của UiPath kết hợp phím tắt hệ thống (`Esc` qua `Hardware Events`) để bỏ qua hoặc đóng hộp thoại. |
-| **3. Window Popup** *(Cửa sổ mới)* | Tab hoặc cửa sổ mới mở riêng biệt thông qua `window.open()`. | Làm Robot mất phương hướng điều hướng (do vẫn đang tương tác với trang cũ). | <span style="color:blue">**Module độc lập (Modularized)**</span> | Được đóng gói thành một **Module xử lý độc lập riêng biệt**, sẵn sàng gọi (Invoke) khi các luồng nghiệp vụ khác yêu cầu đóng cửa sổ mới. |
+| **3. Window Popup** *(Cửa sổ mới)* | Tab hoặc cửa sổ mới mở riêng biệt thông qua `window.open()`. | Làm Robot mất phương hướng điều hướng (do vẫn đang tương tác với trang cũ). | <span style="color:green">**Đã xử lý (Handled & Optimized)**</span> | Sử dụng giải pháp lai lai đa tầng (Proactive Hybrid): Đóng chủ động theo Selector nền trước (`System Window*`, `Test Popup Blocker`), kết hợp vòng quét động dự phòng `GetActiveWindow` có TryCatch bọc bảo vệ chống crash. |
 
 ---
 
@@ -67,10 +67,29 @@ Các hộp thoại này được sinh ra bởi nhân trình duyệt khi chạy c
 ### 3. Window Popup (Cửa sổ/Tab mới độc lập)
 
 #### Bản chất kỹ thuật
-Khi nhấp vào một số liên kết bảo hiểm hoặc điều khoản, trang web sẽ kích hoạt lệnh mở một cửa sổ trình duyệt mới hoàn toàn (`window.open()`).
+Khi nhấp vào một số liên kết bảo hiểm hoặc điều khoản, trang web sẽ kích hoạt lệnh mở một cửa sổ trình duyệt mới hoàn toàn (`window.open()`). 
+Một thách thức lớn trong tự động hóa là khi click nút gây lỗi, UiPath thường tự động kích hoạt lại trang mẹ (`ActivateBefore = True`), làm cho hoạt động lấy cửa sổ hiện hành (`GetActiveWindow`) nhận nhầm trang mẹ là cửa sổ cần đóng, dẫn đến việc Robot lập tức thoát vòng dọn dẹp và bỏ sót các popup nền.
 
 #### Trạng thái hiện tại
-* <span style="color:blue">**Đóng gói thành Module độc lập**</span>: Luồng quy trình chính không trực tiếp nhúng phần này để giữ sự tối giản và linh hoạt. Thay vào đó, nó được xây dựng thành một Module riêng biệt chuyên trách. Khi người dùng muốn thực hiện đóng Window Popup, họ chỉ cần gọi (Invoke) Module này ra là hoàn thành nhiệm vụ.
+* <span style="color:green">**Đã xử lý hoàn toàn & Tối ưu hóa vượt trội**</span>
+
+#### Giải pháp kỹ thuật lai đa tầng (Proactive Hybrid Approach)
+Chúng ta xử lý loại popup này bằng quy trình dọn dẹp 2 giai đoạn khép kín trong tệp [Close_Window_Popup.xaml](file:///c:/Users/PC/Desktop/QuintetCompany/projects/insurance_auto_login_ms_uipath/UI_Path_Project/UIPath_ClosePopupInUI/Close_Window_Popup.xaml):
+
+1. **Giai đoạn 1: Chủ động đóng bằng Selector trực tiếp (Proactive Selector Closing)**:
+   * **Cách hoạt động:** Robot sử dụng hoạt động `ui:CloseWindow` với các Selector định danh trực tiếp để dọn sạch các popup mục tiêu mà không cần quan tâm đến Focus hay cửa sổ nào đang Active:
+     * Đối với Solution 03 (Popups của Button 3): `<html app='chrome.exe' title='System Window*' />` (Quét sạch cả 2 popup System Window Popup 1 & 2 cùng lúc).
+     * Đối với Solution 02 (Popup Blocker): `<html app='chrome.exe' title='Test Popup Blocker' />`.
+   * **Ưu điểm:** Tốc độ phản hồi cực nhanh, độc lập hoàn toàn với ngữ cảnh kích hoạt của trang mẹ.
+
+2. **Giai đoạn 2: Quét động dự phòng & Bảo vệ đa tầng (Dynamic Fallback Loop with Dual-Protection)**:
+   * **Bọc TryCatch chống sập luồng:** Luồng gán biến `mainTitle = in_Browser.Get("title").ToString` được bảo vệ bằng khối `TryCatch` an toàn tuyệt đối. Nếu đối tượng trình duyệt chưa sẵn sàng hoặc gặp lỗi đồng bộ, biến `mainTitle` sẽ tự gán bằng `""` và tiếp tục luồng quét thay vì dừng hoạt động của Robot.
+   * **Danh sách loại trừ trang mẹ (Protected Titles Exclusion List):**
+     Sử dụng biểu thức điều kiện loại trừ thông minh hỗ trợ đa trình duyệt (Chrome & Edge) để bảo vệ an toàn cho trang làm việc chính trong mọi trường hợp:
+     ```vb
+     activeWindow.Selector IsNot Nothing AndAlso (activeWindow.Selector.ToString.ToLower.Contains("chrome") OrElse activeWindow.Selector.ToString.ToLower.Contains("msedge") OrElse activeWindow.Selector.ToString.ToLower.Contains("edge"))
+     ```
+   * **Vòng lặp dọn dẹp quét động:** Sử dụng vòng lặp `While` kết hợp `ui:GetActiveWindow` để đóng bất kỳ cửa sổ lạ nào khác không nằm trong danh sách loại trừ bảo vệ.
 
 ---
 
