@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click 'Button 2'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "cLadQeeAQ0iJ9TSr9VHdOA",
+  "Reference": "DVdlk3iFrkCiJNQSjEa6TQ/cLadQeeAQ0iJ9TSr9VHdOA",
+  "ParentRef": "DVdlk3iFrkCiJNQSjEa6TQ/cMlsPYGnfUyjoyHHJB3Tqw",
+  "Created": "2026-05-05T10:09:17.1252002Z",
+  "Updated": "2026-05-05T10:09:17.1252002Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

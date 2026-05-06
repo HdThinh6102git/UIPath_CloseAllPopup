@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nxGhd86vsE6JIe050L9qFw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="localhost" DesignTimeRectangle="1714, 582, 175, 56" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-custom-02' tag='BUTTON' /&gt;" Guid="87efaca5-e7a7-45d9-9f8d-e17b336da9ac" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Popup Testing Suite' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="df81e195b57907bd4a913030c4ad73c8.jpg" xmlns="">0bR09_IMBgEq_PTGCtpF88w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

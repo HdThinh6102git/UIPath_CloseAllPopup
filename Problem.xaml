@@ -1,0 +1,212 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Test Modular Flow" sap:VirtualizedContainerService.HintSize="1238,2165" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="browserInstance" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Start" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[TEST] Starting Modular Test...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,940" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="a320b4ba-802b-45d7-b43f-93942e5859f3" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,737" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="a320b4ba-802b-45d7-b43f-93942e5859f3" Text="123" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="localhost/login.html" ContentHash="0cCobEgFwEm9T8Bv4gD0zA" DesignTimeRectangle="777, 565, 385, 56" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' class='' placeholder='Enter username' aaname='Username' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="bc6eb828-a86e-44f7-870a-57ba0382360c" InformativeScreenshot="469dd599631694403cf9d4ba6b6ed5be.jpg" IsResponsive="True" Reference="DVdlk3iFrkCiJNQSjEa6TQ/u_3wit1Z0UaZzudd5EPUCQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | RPA Testing Suite' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="777, 535, 385, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Username' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='USERNAME' /&gt;" Guid="50afe016-180d-41e8-88d6-d3b53eba2f76" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="a320b4ba-802b-45d7-b43f-93942e5859f3" Text="123" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="localhost/login.html" ContentHash="9tDlESX9QkKAC06f1oQEmA" DesignTimeRectangle="777, 681, 385, 56" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='' placeholder='Enter password' aaname='Password' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="3f396f60-a8fc-487d-a1c6-671ede1e0fb1" InformativeScreenshot="783467ac69e0fd3f5ed428e5709c74b4.jpg" Reference="DVdlk3iFrkCiJNQSjEa6TQ/zI0ZwxdyE0KhPPwAo4ej9A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | RPA Testing Suite' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="777, 651, 385, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='PASSWORD' /&gt;" Guid="a65bc84d-11c1-4bae-88f1-48098c22c670" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a320b4ba-802b-45d7-b43f-93942e5859f3" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="localhost/login.html" ContentHash="30J4U7et0UqOv8JYhJkJQQ" DesignTimeRectangle="777, 787, 385, 66" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-login' tag='BUTTON' /&gt;" Guid="ec6a9192-4c27-490a-a7f8-a7cab4ce75f9" InformativeScreenshot="41c4209090fe13b29a7de6f59aba8512.jpg" Reference="DVdlk3iFrkCiJNQSjEa6TQ/Xk54mUTteUifqyRDjHYl6w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | RPA Testing Suite' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1929, -12, 1938, 1038" BrowserType="Chrome" ContentHash="a2OGlNI_VkqE7sMaeFK7hQ" IconBase64="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" InformativeScreenshot="ba5b393fe0dfbcefb6351a229caddfb0.jpg" Reference="DVdlk3iFrkCiJNQSjEa6TQ/bxwf2gChAkGCk9241odHww" Selector="&lt;html app='chrome.exe' title='Login | RPA Testing Suite' /&gt;" Url="http://localhost:3000/login.html" Version="V3">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Open Browser for Testing" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,861" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[browserInstance]" ScopeGuid="40e8fa6c-da77-47e3-b62a-c7ca17e0458e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,658" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke WaitPageReady" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WaitPageReady.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="ui:UiElement" x:Key="in_Browser">[browserInstance]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke CloseAllPopUp" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CloseAllPopUp.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="ui:UiElement" x:Key="in_Browser">[browserInstance]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button 1(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,87" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40e8fa6c-da77-47e3-b62a-c7ca17e0458e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="localhost" ContentHash="rD186muYT0WAQ0vnvQWuNA" DesignTimeRectangle="1714, 508, 175, 54" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-custom-01' tag='BUTTON' /&gt;" Guid="df265c57-2249-4d5a-b322-a24e72e8ed12" InformativeScreenshot="c2791cfc4a9882d3faace9fe6341c435.jpg" Reference="DVdlk3iFrkCiJNQSjEa6TQ/quk7n70M00e6WEOVgsQZhg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Popup Testing Suite' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,79" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button 2(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,78" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40e8fa6c-da77-47e3-b62a-c7ca17e0458e" Timeout="5" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="localhost" ContentHash="3YTJH5ghBkut0os7blub9g" DesignTimeRectangle="1714, 582, 175, 56" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='btn-custom-02' tag='BUTTON' /&gt;" Guid="2c11131d-a306-4fa3-a856-696afdc8aa18" InformativeScreenshot="44226f7e1058eead6f7d90933ee71dd0.jpg" Reference="DVdlk3iFrkCiJNQSjEa6TQ/jkr7fFoCJEOTVje8bre5gg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Popup Testing Suite' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1929, -12, 1938, 1038" BrowserType="Chrome" ContentHash="_ZshgTTz4UueM1Q4O1Emiw" IconBase64="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" InformativeScreenshot="5ebb7917b1fbed76caa9143b9c46e07d.jpg" Reference="DVdlk3iFrkCiJNQSjEa6TQ/G9EIb8JtqE2pIYyeAAIj5w" Selector="&lt;html app='chrome.exe' title='RPA Popup Testing Suite' /&gt;" Url="http://localhost:3000/index.html" Version="V3" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log End" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[TEST] Modular Test Completed Successfully!&quot;]" />
+  </Sequence>
+</Activity>
